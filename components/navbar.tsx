@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,8 +30,14 @@ const Navbar = () => {
         <div className="nav-content">
           <div className="nav-logo">
             <Link href="/">
-              <span className="nav-logo-accent">⚡</span>
-              AUPS Network
+              {/* <span className="nav-logo-accent">⚡</span>
+              AUPS Network */}
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+              />
             </Link>
           </div>
 

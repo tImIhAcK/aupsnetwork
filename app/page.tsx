@@ -163,7 +163,7 @@ export default function Home() {
           <div className="story-content">
             <h2>Built on Engineering Excellence</h2>
             <p>
-              For over a decade, AUPS Network has been the trusted electrical
+              For over 5 years, AUPS Network has been the trusted electrical
               installation partner for Nigeria's most demanding infrastructure
               projects. Our team of certified engineers and technicians brings
               precision, safety, and reliability to every installation.
@@ -176,11 +176,11 @@ export default function Home() {
 
             <div className="story-stats">
               <div className="stat-item">
-                <div className="stat-number">500+</div>
+                <div className="stat-number">70+</div>
                 <div className="stat-label">Projects Completed</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">12+</div>
+                <div className="stat-number">5+</div>
                 <div className="stat-label">Years Experience</div>
               </div>
               <div className="stat-item">
