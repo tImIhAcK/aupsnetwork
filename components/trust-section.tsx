@@ -13,14 +13,14 @@ const TrustSection = () => {
           </div>
 
           <div className="trust-grid">
-            <div className="trust-item">
+            {/* <div className="trust-item">
               <div className="trust-icon">📋</div>
               <h3 className="trust-title">ISO Certified</h3>
               <p className="trust-description">
                 ISO 9001:2015 quality management and ISO 45001 occupational
                 health & safety standards
               </p>
-            </div>
+            </div> */}
 
             <div className="trust-item">
               <div className="trust-icon">🛡️</div>

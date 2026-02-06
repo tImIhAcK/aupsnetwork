@@ -7,6 +7,9 @@ import ProjectsGallery from "@/components/project-gallery";
 import TrustSection from "@/components/trust-section";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
+import Image from "next/image";
+import Link from "next/link";
+import Contact from "@/components/contact";
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
@@ -14,7 +17,6 @@ if (typeof window !== "undefined") {
 }
 
 export default function Home() {
-
   // Scroll-triggered animations
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -148,7 +150,6 @@ export default function Home() {
     return () => ctx.revert();
   }, []);
 
-
   return (
     <div className="portfolio-container">
       {/* Navigation */}
@@ -164,9 +165,10 @@ export default function Home() {
             <h2>Built on Engineering Excellence</h2>
             <p>
               For over 5 years, AUPS Network has been the trusted electrical
-              installation partner for Nigeria's most demanding infrastructure
-              projects. Our team of certified engineers and technicians brings
-              precision, safety, and reliability to every installation.
+              installation partner for Nigeria&apos;s most demanding
+              infrastructure projects. Our team of certified engineers and
+              technicians brings precision, safety, and reliability to every
+              installation.
             </p>
             <p>
               From high-voltage industrial systems to complex commercial
@@ -214,99 +216,75 @@ export default function Home() {
               Comprehensive Electrical Solutions
             </h2>
             <p className="section-description">
-              Engineered installations across commercial, industrial, and
-              infrastructure sectors
+              Engineered electrical, power, and security systems for commercial,
+              industrial, and infrastructure projects
             </p>
           </div>
 
           <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon">🏭</div>
-              <h3 className="service-title">Industrial Installations</h3>
-              <p className="service-description">
-                High-voltage systems, power distribution, and industrial
-                automation for manufacturing and processing facilities.
-              </p>
-              <ul className="service-features">
-                <li>Three-phase power systems</li>
-                <li>Motor control centers</li>
-                <li>Industrial lighting</li>
-                <li>Emergency backup systems</li>
-              </ul>
-            </div>
-
-            <div className="service-card">
-              <div className="service-icon">🏢</div>
-              <h3 className="service-title">Commercial Projects</h3>
-              <p className="service-description">
-                Complete electrical infrastructure for office buildings, retail
-                spaces, and commercial developments.
-              </p>
-              <ul className="service-features">
-                <li>Building management systems</li>
-                <li>Data center power</li>
-                <li>HVAC electrical integration</li>
-                <li>Energy-efficient solutions</li>
-              </ul>
-            </div>
-
+            {/* POWER & INDUSTRIAL */}
             <div className="service-card">
               <div className="service-icon">⚡</div>
-              <h3 className="service-title">Power Distribution</h3>
+              <h3 className="service-title">Power & Industrial Systems</h3>
               <p className="service-description">
-                Critical infrastructure for reliable power delivery, load
-                balancing, and grid integration.
+                Design and installation of robust electrical systems for
+                industrial and large-scale commercial environments.
               </p>
               <ul className="service-features">
-                <li>Substation installations</li>
-                <li>Transformer installations</li>
-                <li>Load management systems</li>
-                <li>Power factor correction</li>
+                <li>High & low voltage installations</li>
+                <li>Power distribution & load balancing</li>
+                <li>Industrial lighting systems</li>
+                <li>Emergency & backup power systems</li>
               </ul>
             </div>
 
-            <div className="service-card">
-              <div className="service-icon">🔧</div>
-              <h3 className="service-title">Maintenance & Support</h3>
-              <p className="service-description">
-                Preventive maintenance programs and 24/7 emergency response for
-                critical systems.
-              </p>
-              <ul className="service-features">
-                <li>Scheduled inspections</li>
-                <li>Thermal imaging diagnostics</li>
-                <li>System upgrades</li>
-                <li>Emergency repairs</li>
-              </ul>
-            </div>
-
+            {/* COMMERCIAL & INFRASTRUCTURE */}
             <div className="service-card">
               <div className="service-icon">🏗️</div>
-              <h3 className="service-title">Infrastructure Projects</h3>
+              <h3 className="service-title">
+                Commercial & Infrastructure Projects
+              </h3>
               <p className="service-description">
-                Large-scale electrical infrastructure for public works,
-                utilities, and critical facilities.
+                Electrical infrastructure for offices, public facilities, and
+                critical infrastructure projects.
               </p>
               <ul className="service-features">
-                <li>Street lighting systems</li>
-                <li>Public utility installations</li>
-                <li>Airport & transport facilities</li>
-                <li>Hospital critical systems</li>
+                <li>Office & commercial buildings</li>
+                <li>Street lighting & public utilities</li>
+                <li>Hospitals & critical facilities</li>
+                <li>Transport & large public spaces</li>
               </ul>
             </div>
 
+            {/* SOLAR & ENERGY SYSTEMS */}
             <div className="service-card">
-              <div className="service-icon">🌐</div>
-              <h3 className="service-title">Smart Systems</h3>
+              <div className="service-icon">☀️</div>
+              <h3 className="service-title">Solar & Energy Solutions</h3>
               <p className="service-description">
-                Advanced automation, monitoring, and control systems for modern
-                electrical infrastructure.
+                Sustainable power systems engineered for efficiency,
+                reliability, and long-term performance.
               </p>
               <ul className="service-features">
-                <li>Building automation</li>
-                <li>Energy monitoring systems</li>
-                <li>Remote diagnostics</li>
-                <li>IoT integration</li>
+                <li>Solar PV system design & installation</li>
+                <li>Inverters, batteries & energy storage</li>
+                <li>Hybrid solar–grid systems</li>
+                <li>Energy efficiency optimization</li>
+              </ul>
+            </div>
+
+            {/* SECURITY & SMART SYSTEMS */}
+            <div className="service-card">
+              <div className="service-icon">📹</div>
+              <h3 className="service-title">Security & Smart Systems</h3>
+              <p className="service-description">
+                Integrated security and intelligent systems for monitoring,
+                automation, and protection.
+              </p>
+              <ul className="service-features">
+                <li>CCTV camera installation & monitoring</li>
+                <li>Access control & surveillance systems</li>
+                <li>Smart building automation</li>
+                <li>Remote monitoring & control</li>
               </ul>
             </div>
           </div>
@@ -319,100 +297,8 @@ export default function Home() {
       {/* Trust Section */}
       <TrustSection />
 
-      {/* CTA Section */}
-      <section id="contact" className="cta-section">
-        <div className="cta-container">
-          <div className="cta-content">
-            <h2>Ready to Power Your Project?</h2>
-            <p>
-              Get a detailed consultation and project quote from our engineering
-              team. We respond within 24 hours.
-            </p>
-
-            <div className="cta-buttons">
-              <button className="btn-primary">Request Quote</button>
-              <button className="btn-secondary">Schedule Call</button>
-            </div>
-
-            <form className="contact-form">
-              <div className="form-group">
-                <label className="form-label">Full Name</label>
-                <input
-                  type="text"
-                  className="form-input"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Email Address</label>
-                <input
-                  type="email"
-                  className="form-input"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Phone Number</label>
-                <input
-                  type="tel"
-                  className="form-input"
-                  placeholder="+234 XXX XXX XXXX"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Project Details</label>
-                <textarea
-                  className="form-textarea"
-                  placeholder="Tell us about your project requirements..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="btn-primary"
-                style={{ width: "100%" }}
-              >
-                Submit Request
-              </button>
-            </form>
-
-            <div className="contact-methods">
-              <div className="contact-method">
-                <div className="contact-method-icon">📞</div>
-                <div className="contact-method-label">Phone</div>
-                <a href="tel:+2348012345678" className="contact-method-value">
-                  +234 801 234 5678
-                </a>
-              </div>
-
-              <div className="contact-method">
-                <div className="contact-method-icon">💬</div>
-                <div className="contact-method-label">WhatsApp</div>
-                <a
-                  href="https://wa.me/2348012345678"
-                  className="contact-method-value"
-                >
-                  Chat with us
-                </a>
-              </div>
-
-              <div className="contact-method">
-                <div className="contact-method-icon">✉️</div>
-                <div className="contact-method-label">Email</div>
-                <a
-                  href="mailto:info@aupsnetwork.com"
-                  className="contact-method-value"
-                >
-                  info@aupsnetwork.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Contact Section */}
+      <Contact />
 
       {/* Footer */}
       <footer className="footer">
@@ -420,8 +306,11 @@ export default function Home() {
           <div className="footer-top">
             <div>
               <div className="footer-brand">
-                <span style={{ color: "var(--color-accent)" }}>⚡</span> AUPS
-                Network
+                <Link href="/">
+                  {/* <span className="nav-logo-accent">⚡</span>
+              AUPS Network */}
+                  <Image src="/logo.png" alt="Logo" width={100} height={100} />
+                </Link>
               </div>
               <p className="footer-description">
                 Professional electrical installation services for commercial,
@@ -474,7 +363,7 @@ export default function Home() {
                 <li>
                   <a href="mailto:info@aupsnetwork.com">info@aupsnetwork.com</a>
                 </li>
-                <li>Lagos, Nigeria</li>
+                <li>Nigeria</li>
               </ul>
             </div>
           </div>
