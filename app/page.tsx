@@ -358,7 +358,7 @@ export default function Home() {
               <h4 className="footer-section-title">Contact</h4>
               <ul className="footer-links">
                 <li>
-                  <a href="tel:+2348012345678">+234 801 234 5678</a>
+                  <a href="tel:+2348067619487">+234 806 761 9487</a>
                 </li>
                 <li>
                   <a href="mailto:info@aupsnetwork.com">info@aupsnetwork.com</a>

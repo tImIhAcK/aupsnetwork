@@ -67,7 +67,7 @@ const Contact = () => {
                 <div className="contact-method-icon">📞</div>
                 <div className="contact-method-label">Phone</div>
                 <a href="tel:+2348012345678" className="contact-method-value">
-                  +234 801 234 5678
+                  +234 806 761 9487
                 </a>
               </div>
 
@@ -75,7 +75,7 @@ const Contact = () => {
                 <div className="contact-method-icon">💬</div>
                 <div className="contact-method-label">WhatsApp</div>
                 <a
-                  href="https://wa.me/2348012345678"
+                  href="https://wa.me/2348067619487"
                   className="contact-method-value"
                 >
                   Chat with us
